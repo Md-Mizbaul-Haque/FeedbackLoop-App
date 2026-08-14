@@ -1,15 +1,18 @@
 {
   "expo": {
-    "name": "feedbackloop-app",
-    "slug": "feedbackloop-app",
+    "name": "FeedbackLoop",
+    "slug": "feedbackloop",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
+    "scheme": "feedbackloop",
     "userInterfaceStyle": "light",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.feedbackloop.app"
     },
     "android": {
+      "package": "com.feedbackloop.app",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",
@@ -19,7 +22,13 @@
       "predictiveBackGestureEnabled": false
     },
     "web": {
+      "bundler": "metro",
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-web-browser",
+      "expo-font",
+      "expo-secure-store"
+    ]
   }
 }
